@@ -7,7 +7,7 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
   && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
   && apt-get update -qqy \
   && apt-get -qqy install \
-    ${CHROME_VERSION:-google-chrome-stable} xvfb libxpm4 libxrender1 libgtk2.0-0 libnss3 libgconf-2-4 \
+    apt-utils ${CHROME_VERSION:-google-chrome-stable} xvfb libxpm4 libxrender1 libgtk2.0-0 libnss3 libgconf-2-4 \
   && rm /etc/apt/sources.list.d/google-chrome.list \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/
 
