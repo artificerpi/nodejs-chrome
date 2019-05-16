@@ -29,7 +29,10 @@ steps:
 
 - name: test
   image: artificerpi/nodejs-chrome
+  # following line only works with self-hosted drone server
+  privileged: true
   commands:
+      # there may be some permission issues with user node
     - ./node_modules/.bin/ng e2e
     - ./node_modules/.bin/ng test --browsers=ChromeHeadless --watch=false
 ```
