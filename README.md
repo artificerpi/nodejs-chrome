@@ -5,10 +5,10 @@ Docker image to build and test Angular in container.
 
 ```bash
 # run with `privileged` option enabled
-docker run --privileged nodejs-chrome ...
+docker run --privileged artificerpi/nodejs-chrome ...
 
 # or with customized seccomp security profile (recommended)
-docker run --security-opt seccomp:/path/to/chrome.json
+docker run --security-opt seccomp:/path/to/chrome.json artificerpi/nodejs-chrome ...
 ```
 
 
